@@ -4,7 +4,8 @@ A_to_z = "abcdefghijklmnopqrstuvwxyz"
 Z_ord_val = "z".ord
 
 def cipher(string, shift_value)
-  string.chars.map do | char |
+
+ ciphered = string.split('').map do | char |
     if A_to_z.include?(char.downcase)
       char_value = char.downcase.ord + shift_value
       pivoted_val = char_value > Z_ord_val ? char_value - 26 : char_value
@@ -12,9 +13,11 @@ def cipher(string, shift_value)
     else
       char
     end
-  end.join
-end
+  end
 
+  ciphered.join('')
+
+end
 
 puts cipher(str, 2)
 puts cipher("What a string!", 5)
