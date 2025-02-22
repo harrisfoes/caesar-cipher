@@ -1,5 +1,6 @@
-# caesar-cipher
-Ruby project for Odin
+# Caesar Cipher
+## Ruby project for Odin
+
 
 Dear reader,
 
