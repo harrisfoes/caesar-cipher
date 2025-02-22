@@ -1,14 +1,13 @@
 
 str = "Helloaa_yz"
 A_to_z = "abcdefghijklmnopqrstuvwxyz"
-Z_ord_val = "z".ord
 
 def cipher(string, shift_value)
 
  ciphered = string.split('').map do | char |
     if A_to_z.include?(char.downcase)
       char_value = char.downcase.ord + shift_value
-      pivoted_val = char_value > Z_ord_val ? char_value - 26 : char_value
+      pivoted_val = char_value > "z".ord ? char_value - 26 : char_value
       char == char.downcase ? pivoted_val.chr : pivoted_val.chr.upcase
     else
       char
